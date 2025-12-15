@@ -1,0 +1,14 @@
+{
+  "name": "rdk-coding-assessment",
+  "version": "1.0.0",
+  "description": "RDK Academy Coding Assessment",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "node-fetch": "^3.3.2"
+  }
+}
