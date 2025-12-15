@@ -15,7 +15,7 @@ async function getWeather(city) {
     return null;
   }
 
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)}&appid=${API_KEY}&units=metric`;
+  const url = `${BASE_URL}?q=${encodeURIComponent(city)}&appid=${API_KEY}&units=metric`;
 
   try {
     const response = await fetch(url);
@@ -38,7 +38,6 @@ async function getWeather(city) {
     return null;
   }
 }
-
 
 // Display weather details
 function displayWeather(weather) {
@@ -91,8 +90,12 @@ export async function startWeatherCLI(ask) {
 
     } else if (choice === "4") {
       const city = await ask("Enter city name to remove: ");
-      favouriteCities = favouriteCities.filter(c => c !== city);
-      console.log(`${city} removed (if it existed).`);
+      if (favouriteCities.includes(city)) {
+        favouriteCities = favouriteCities.filter(c => c !== city);
+        console.log(`${city} removed from favourites.`);
+      } else {
+        console.log(`${city} is not in your favourites.`);
+      }
 
     } else if (choice === "5") {
       break;
