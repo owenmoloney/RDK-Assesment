@@ -1,5 +1,4 @@
 
-```markdown
 # RDK Assessment: Weather CLI & Median Finder
 
 This repository contains my submission for the RDK Academy coding assessment. It includes:
@@ -11,11 +10,12 @@ Both programs are written in **JavaScript** and designed to be simple, clean, an
 
 
 
-```
+
+
 ##  Project Structure
 
-```
 
+```markdown
 RDK-Assesment/
 ├── src/
 │   ├── index.js       # Main entry point
@@ -112,3 +112,4 @@ node src/index.js
 ##  License
 
 This project is submitted for the **RDK Academy coding assessment** and is not licensed for commercial use.
+
